@@ -30,39 +30,39 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonEncryptSave = new System.Windows.Forms.Button();
+            this.textBoxEncryptedText = new System.Windows.Forms.TextBox();
+            this.buttonEncrypt = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelEncryptPublicKeyFile = new System.Windows.Forms.Label();
+            this.buttonEncryptChoosePublicKey = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxEncryptMessage = new System.Windows.Forms.TextBox();
             this.tabPageDecrypt = new System.Windows.Forms.TabPage();
+            this.buttonDecrypt = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxDecryptMessage = new System.Windows.Forms.TextBox();
+            this.textBoxEDecryptPassphrase = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelDecryptPrivateKey = new System.Windows.Forms.Label();
+            this.buttonDecryptChoosePblicKey = new System.Windows.Forms.Button();
+            this.buttonDecryptImportPublicKey = new System.Windows.Forms.Button();
+            this.textBoxDecryptText = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPageKeys = new System.Windows.Forms.TabPage();
-            this.buttonCreateKeyClear = new System.Windows.Forms.Button();
-            this.buttonCreateKey = new System.Windows.Forms.Button();
+            this.textBoxCreateKeyMessage = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonCreateKeyClear = new System.Windows.Forms.Button();
             this.textBoxCreateKeyPassprase = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numericCreateKeySize = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCreateKey = new System.Windows.Forms.Button();
             this.textBoxCreateKeyName = new System.Windows.Forms.TextBox();
             this.tabPageAboutProgram = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBoxCreateKeyMessage = new System.Windows.Forms.TextBox();
-            this.textBoxEncryptMessage = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonEncryptChoosePublicKey = new System.Windows.Forms.Button();
-            this.labelEncryptPublicKeyFile = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.buttonEncrypt = new System.Windows.Forms.Button();
-            this.textBoxEncryptedText = new System.Windows.Forms.TextBox();
-            this.buttonEncryptSave = new System.Windows.Forms.Button();
-            this.textBoxDecryptText = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.buttonDecryptImportPublicKey = new System.Windows.Forms.Button();
-            this.labelDecryptPrivateKey = new System.Windows.Forms.Label();
-            this.buttonDecryptChoosePblicKey = new System.Windows.Forms.Button();
-            this.textBoxEDecryptPassphrase = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxDecryptMessage = new System.Windows.Forms.TextBox();
-            this.buttonDecrypt = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPageDecrypt.SuspendLayout();
@@ -103,6 +103,77 @@
             this.tabPage1.Text = "Encrypt";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonEncryptSave
+            // 
+            this.buttonEncryptSave.Location = new System.Drawing.Point(320, 375);
+            this.buttonEncryptSave.Name = "buttonEncryptSave";
+            this.buttonEncryptSave.Size = new System.Drawing.Size(166, 27);
+            this.buttonEncryptSave.TabIndex = 7;
+            this.buttonEncryptSave.Text = "Save encrypted text";
+            this.buttonEncryptSave.UseVisualStyleBackColor = true;
+            // 
+            // textBoxEncryptedText
+            // 
+            this.textBoxEncryptedText.Location = new System.Drawing.Point(7, 249);
+            this.textBoxEncryptedText.Multiline = true;
+            this.textBoxEncryptedText.Name = "textBoxEncryptedText";
+            this.textBoxEncryptedText.ReadOnly = true;
+            this.textBoxEncryptedText.Size = new System.Drawing.Size(479, 120);
+            this.textBoxEncryptedText.TabIndex = 6;
+            // 
+            // buttonEncrypt
+            // 
+            this.buttonEncrypt.Location = new System.Drawing.Point(409, 151);
+            this.buttonEncrypt.Name = "buttonEncrypt";
+            this.buttonEncrypt.Size = new System.Drawing.Size(77, 30);
+            this.buttonEncrypt.TabIndex = 5;
+            this.buttonEncrypt.Text = "Encrypt";
+            this.buttonEncrypt.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 226);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Encrypted text";
+            // 
+            // labelEncryptPublicKeyFile
+            // 
+            this.labelEncryptPublicKeyFile.AutoSize = true;
+            this.labelEncryptPublicKeyFile.Location = new System.Drawing.Point(163, 154);
+            this.labelEncryptPublicKeyFile.Name = "labelEncryptPublicKeyFile";
+            this.labelEncryptPublicKeyFile.Size = new System.Drawing.Size(69, 20);
+            this.labelEncryptPublicKeyFile.TabIndex = 3;
+            this.labelEncryptPublicKeyFile.Text = "filename";
+            // 
+            // buttonEncryptChoosePublicKey
+            // 
+            this.buttonEncryptChoosePublicKey.Location = new System.Drawing.Point(6, 149);
+            this.buttonEncryptChoosePublicKey.Name = "buttonEncryptChoosePublicKey";
+            this.buttonEncryptChoosePublicKey.Size = new System.Drawing.Size(151, 30);
+            this.buttonEncryptChoosePublicKey.TabIndex = 2;
+            this.buttonEncryptChoosePublicKey.Text = "Choose public key";
+            this.buttonEncryptChoosePublicKey.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Message";
+            // 
+            // textBoxEncryptMessage
+            // 
+            this.textBoxEncryptMessage.Location = new System.Drawing.Point(7, 44);
+            this.textBoxEncryptMessage.Multiline = true;
+            this.textBoxEncryptMessage.Name = "textBoxEncryptMessage";
+            this.textBoxEncryptMessage.Size = new System.Drawing.Size(479, 99);
+            this.textBoxEncryptMessage.TabIndex = 0;
+            // 
             // tabPageDecrypt
             // 
             this.tabPageDecrypt.Controls.Add(this.buttonDecrypt);
@@ -123,6 +194,94 @@
             this.tabPageDecrypt.Text = "Decrypt";
             this.tabPageDecrypt.UseVisualStyleBackColor = true;
             // 
+            // buttonDecrypt
+            // 
+            this.buttonDecrypt.Location = new System.Drawing.Point(405, 246);
+            this.buttonDecrypt.Name = "buttonDecrypt";
+            this.buttonDecrypt.Size = new System.Drawing.Size(80, 30);
+            this.buttonDecrypt.TabIndex = 16;
+            this.buttonDecrypt.Text = "Decrypt";
+            this.buttonDecrypt.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(2, 275);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 20);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Message";
+            // 
+            // textBoxDecryptMessage
+            // 
+            this.textBoxDecryptMessage.Location = new System.Drawing.Point(6, 298);
+            this.textBoxDecryptMessage.Multiline = true;
+            this.textBoxDecryptMessage.Name = "textBoxDecryptMessage";
+            this.textBoxDecryptMessage.ReadOnly = true;
+            this.textBoxDecryptMessage.Size = new System.Drawing.Size(479, 93);
+            this.textBoxDecryptMessage.TabIndex = 14;
+            // 
+            // textBoxEDecryptPassphrase
+            // 
+            this.textBoxEDecryptPassphrase.Location = new System.Drawing.Point(6, 195);
+            this.textBoxEDecryptPassphrase.Multiline = true;
+            this.textBoxEDecryptPassphrase.Name = "textBoxEDecryptPassphrase";
+            this.textBoxEDecryptPassphrase.Size = new System.Drawing.Size(478, 45);
+            this.textBoxEDecryptPassphrase.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 172);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(195, 20);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Passphrase for private key";
+            // 
+            // labelDecryptPrivateKey
+            // 
+            this.labelDecryptPrivateKey.AutoSize = true;
+            this.labelDecryptPrivateKey.Location = new System.Drawing.Point(165, 130);
+            this.labelDecryptPrivateKey.Name = "labelDecryptPrivateKey";
+            this.labelDecryptPrivateKey.Size = new System.Drawing.Size(69, 20);
+            this.labelDecryptPrivateKey.TabIndex = 11;
+            this.labelDecryptPrivateKey.Text = "filename";
+            // 
+            // buttonDecryptChoosePblicKey
+            // 
+            this.buttonDecryptChoosePblicKey.Location = new System.Drawing.Point(8, 125);
+            this.buttonDecryptChoosePblicKey.Name = "buttonDecryptChoosePblicKey";
+            this.buttonDecryptChoosePblicKey.Size = new System.Drawing.Size(151, 30);
+            this.buttonDecryptChoosePblicKey.TabIndex = 10;
+            this.buttonDecryptChoosePblicKey.Text = "Choose public key";
+            this.buttonDecryptChoosePblicKey.UseVisualStyleBackColor = true;
+            // 
+            // buttonDecryptImportPublicKey
+            // 
+            this.buttonDecryptImportPublicKey.Location = new System.Drawing.Point(305, 14);
+            this.buttonDecryptImportPublicKey.Name = "buttonDecryptImportPublicKey";
+            this.buttonDecryptImportPublicKey.Size = new System.Drawing.Size(181, 27);
+            this.buttonDecryptImportPublicKey.TabIndex = 9;
+            this.buttonDecryptImportPublicKey.Text = "Import encrypted text";
+            this.buttonDecryptImportPublicKey.UseVisualStyleBackColor = true;
+            // 
+            // textBoxDecryptText
+            // 
+            this.textBoxDecryptText.Location = new System.Drawing.Point(8, 47);
+            this.textBoxDecryptText.Multiline = true;
+            this.textBoxDecryptText.Name = "textBoxDecryptText";
+            this.textBoxDecryptText.Size = new System.Drawing.Size(479, 77);
+            this.textBoxDecryptText.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(2, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 20);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Encrypted text";
+            // 
             // tabPageKeys
             // 
             this.tabPageKeys.Controls.Add(this.textBoxCreateKeyMessage);
@@ -137,24 +296,25 @@
             this.tabPageKeys.Text = "Keys";
             this.tabPageKeys.UseVisualStyleBackColor = true;
             // 
-            // buttonCreateKeyClear
+            // textBoxCreateKeyMessage
             // 
-            this.buttonCreateKeyClear.Location = new System.Drawing.Point(327, 156);
-            this.buttonCreateKeyClear.Name = "buttonCreateKeyClear";
-            this.buttonCreateKeyClear.Size = new System.Drawing.Size(75, 31);
-            this.buttonCreateKeyClear.TabIndex = 12;
-            this.buttonCreateKeyClear.Text = "Clear";
-            this.buttonCreateKeyClear.UseVisualStyleBackColor = true;
-            this.buttonCreateKeyClear.UseWaitCursor = true;
+            this.textBoxCreateKeyMessage.Location = new System.Drawing.Point(13, 207);
+            this.textBoxCreateKeyMessage.Multiline = true;
+            this.textBoxCreateKeyMessage.Name = "textBoxCreateKeyMessage";
+            this.textBoxCreateKeyMessage.ReadOnly = true;
+            this.textBoxCreateKeyMessage.Size = new System.Drawing.Size(476, 158);
+            this.textBoxCreateKeyMessage.TabIndex = 13;
             // 
-            // buttonCreateKey
+            // button3
             // 
-            this.buttonCreateKey.Location = new System.Drawing.Point(408, 156);
-            this.buttonCreateKey.Name = "buttonCreateKey";
-            this.buttonCreateKey.Size = new System.Drawing.Size(75, 31);
-            this.buttonCreateKey.TabIndex = 7;
-            this.buttonCreateKey.Text = "Create";
-            this.buttonCreateKey.UseVisualStyleBackColor = true;
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(411, 371);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 31);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Save";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label6
             // 
@@ -183,6 +343,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Create key";
             // 
+            // buttonCreateKeyClear
+            // 
+            this.buttonCreateKeyClear.Location = new System.Drawing.Point(327, 156);
+            this.buttonCreateKeyClear.Name = "buttonCreateKeyClear";
+            this.buttonCreateKeyClear.Size = new System.Drawing.Size(75, 31);
+            this.buttonCreateKeyClear.TabIndex = 12;
+            this.buttonCreateKeyClear.Text = "Clear";
+            this.buttonCreateKeyClear.UseVisualStyleBackColor = true;
+            this.buttonCreateKeyClear.UseWaitCursor = true;
+            this.buttonCreateKeyClear.Click += new System.EventHandler(this.buttonCreateKeyClear_Click);
+            // 
             // textBoxCreateKeyPassprase
             // 
             this.textBoxCreateKeyPassprase.Location = new System.Drawing.Point(10, 96);
@@ -203,6 +374,16 @@
             // numericCreateKeySize
             // 
             this.numericCreateKeySize.Location = new System.Drawing.Point(417, 30);
+            this.numericCreateKeySize.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericCreateKeySize.Minimum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
             this.numericCreateKeySize.Name = "numericCreateKeySize";
             this.numericCreateKeySize.Size = new System.Drawing.Size(66, 26);
             this.numericCreateKeySize.TabIndex = 3;
@@ -230,6 +411,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name of key";
             // 
+            // buttonCreateKey
+            // 
+            this.buttonCreateKey.Location = new System.Drawing.Point(408, 156);
+            this.buttonCreateKey.Name = "buttonCreateKey";
+            this.buttonCreateKey.Size = new System.Drawing.Size(75, 31);
+            this.buttonCreateKey.TabIndex = 7;
+            this.buttonCreateKey.Text = "Create";
+            this.buttonCreateKey.UseVisualStyleBackColor = true;
+            this.buttonCreateKey.Click += new System.EventHandler(this.buttonCreateKey_Click);
+            // 
             // textBoxCreateKeyName
             // 
             this.textBoxCreateKeyName.Location = new System.Drawing.Point(109, 30);
@@ -247,183 +438,6 @@
             this.tabPageAboutProgram.TabIndex = 3;
             this.tabPageAboutProgram.Text = "About program";
             this.tabPageAboutProgram.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(411, 371);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBoxCreateKeyMessage
-            // 
-            this.textBoxCreateKeyMessage.Location = new System.Drawing.Point(13, 207);
-            this.textBoxCreateKeyMessage.Multiline = true;
-            this.textBoxCreateKeyMessage.Name = "textBoxCreateKeyMessage";
-            this.textBoxCreateKeyMessage.ReadOnly = true;
-            this.textBoxCreateKeyMessage.Size = new System.Drawing.Size(476, 158);
-            this.textBoxCreateKeyMessage.TabIndex = 13;
-            // 
-            // textBoxEncryptMessage
-            // 
-            this.textBoxEncryptMessage.Location = new System.Drawing.Point(7, 44);
-            this.textBoxEncryptMessage.Multiline = true;
-            this.textBoxEncryptMessage.Name = "textBoxEncryptMessage";
-            this.textBoxEncryptMessage.Size = new System.Drawing.Size(479, 99);
-            this.textBoxEncryptMessage.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Message";
-            // 
-            // buttonEncryptChoosePublicKey
-            // 
-            this.buttonEncryptChoosePublicKey.Location = new System.Drawing.Point(6, 149);
-            this.buttonEncryptChoosePublicKey.Name = "buttonEncryptChoosePublicKey";
-            this.buttonEncryptChoosePublicKey.Size = new System.Drawing.Size(151, 30);
-            this.buttonEncryptChoosePublicKey.TabIndex = 2;
-            this.buttonEncryptChoosePublicKey.Text = "Choose public key";
-            this.buttonEncryptChoosePublicKey.UseVisualStyleBackColor = true;
-            // 
-            // labelEncryptPublicKeyFile
-            // 
-            this.labelEncryptPublicKeyFile.AutoSize = true;
-            this.labelEncryptPublicKeyFile.Location = new System.Drawing.Point(163, 154);
-            this.labelEncryptPublicKeyFile.Name = "labelEncryptPublicKeyFile";
-            this.labelEncryptPublicKeyFile.Size = new System.Drawing.Size(69, 20);
-            this.labelEncryptPublicKeyFile.TabIndex = 3;
-            this.labelEncryptPublicKeyFile.Text = "filename";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 226);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Encrypted text";
-            // 
-            // buttonEncrypt
-            // 
-            this.buttonEncrypt.Location = new System.Drawing.Point(409, 151);
-            this.buttonEncrypt.Name = "buttonEncrypt";
-            this.buttonEncrypt.Size = new System.Drawing.Size(77, 30);
-            this.buttonEncrypt.TabIndex = 5;
-            this.buttonEncrypt.Text = "Encrypt";
-            this.buttonEncrypt.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEncryptedText
-            // 
-            this.textBoxEncryptedText.Location = new System.Drawing.Point(7, 249);
-            this.textBoxEncryptedText.Multiline = true;
-            this.textBoxEncryptedText.Name = "textBoxEncryptedText";
-            this.textBoxEncryptedText.ReadOnly = true;
-            this.textBoxEncryptedText.Size = new System.Drawing.Size(479, 120);
-            this.textBoxEncryptedText.TabIndex = 6;
-            // 
-            // buttonEncryptSave
-            // 
-            this.buttonEncryptSave.Location = new System.Drawing.Point(320, 375);
-            this.buttonEncryptSave.Name = "buttonEncryptSave";
-            this.buttonEncryptSave.Size = new System.Drawing.Size(166, 27);
-            this.buttonEncryptSave.TabIndex = 7;
-            this.buttonEncryptSave.Text = "Save encrypted text";
-            this.buttonEncryptSave.UseVisualStyleBackColor = true;
-            // 
-            // textBoxDecryptText
-            // 
-            this.textBoxDecryptText.Location = new System.Drawing.Point(8, 47);
-            this.textBoxDecryptText.Multiline = true;
-            this.textBoxDecryptText.Name = "textBoxDecryptText";
-            this.textBoxDecryptText.Size = new System.Drawing.Size(479, 77);
-            this.textBoxDecryptText.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Encrypted text";
-            // 
-            // buttonDecryptImportPublicKey
-            // 
-            this.buttonDecryptImportPublicKey.Location = new System.Drawing.Point(305, 14);
-            this.buttonDecryptImportPublicKey.Name = "buttonDecryptImportPublicKey";
-            this.buttonDecryptImportPublicKey.Size = new System.Drawing.Size(181, 27);
-            this.buttonDecryptImportPublicKey.TabIndex = 9;
-            this.buttonDecryptImportPublicKey.Text = "Import encrypted text";
-            this.buttonDecryptImportPublicKey.UseVisualStyleBackColor = true;
-            // 
-            // labelDecryptPrivateKey
-            // 
-            this.labelDecryptPrivateKey.AutoSize = true;
-            this.labelDecryptPrivateKey.Location = new System.Drawing.Point(165, 130);
-            this.labelDecryptPrivateKey.Name = "labelDecryptPrivateKey";
-            this.labelDecryptPrivateKey.Size = new System.Drawing.Size(69, 20);
-            this.labelDecryptPrivateKey.TabIndex = 11;
-            this.labelDecryptPrivateKey.Text = "filename";
-            // 
-            // buttonDecryptChoosePblicKey
-            // 
-            this.buttonDecryptChoosePblicKey.Location = new System.Drawing.Point(8, 125);
-            this.buttonDecryptChoosePblicKey.Name = "buttonDecryptChoosePblicKey";
-            this.buttonDecryptChoosePblicKey.Size = new System.Drawing.Size(151, 30);
-            this.buttonDecryptChoosePblicKey.TabIndex = 10;
-            this.buttonDecryptChoosePblicKey.Text = "Choose public key";
-            this.buttonDecryptChoosePblicKey.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEDecryptPassphrase
-            // 
-            this.textBoxEDecryptPassphrase.Location = new System.Drawing.Point(6, 195);
-            this.textBoxEDecryptPassphrase.Multiline = true;
-            this.textBoxEDecryptPassphrase.Name = "textBoxEDecryptPassphrase";
-            this.textBoxEDecryptPassphrase.Size = new System.Drawing.Size(478, 45);
-            this.textBoxEDecryptPassphrase.TabIndex = 13;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 172);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(195, 20);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Passphrase for private key";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(2, 275);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 20);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Message";
-            // 
-            // textBoxDecryptMessage
-            // 
-            this.textBoxDecryptMessage.Location = new System.Drawing.Point(6, 298);
-            this.textBoxDecryptMessage.Multiline = true;
-            this.textBoxDecryptMessage.Name = "textBoxDecryptMessage";
-            this.textBoxDecryptMessage.ReadOnly = true;
-            this.textBoxDecryptMessage.Size = new System.Drawing.Size(479, 93);
-            this.textBoxDecryptMessage.TabIndex = 14;
-            // 
-            // buttonDecrypt
-            // 
-            this.buttonDecrypt.Location = new System.Drawing.Point(405, 246);
-            this.buttonDecrypt.Name = "buttonDecrypt";
-            this.buttonDecrypt.Size = new System.Drawing.Size(80, 30);
-            this.buttonDecrypt.TabIndex = 16;
-            this.buttonDecrypt.Text = "Decrypt";
-            this.buttonDecrypt.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
