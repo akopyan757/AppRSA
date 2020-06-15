@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Numerics;
 using System.Text;
 using AppRSA.AES;
+using AppRSA.StringUtils;
 
 namespace AppRSA.RSA
 {
@@ -12,8 +15,8 @@ namespace AppRSA.RSA
 
         private BigInteger _d;
         private BigInteger _n;
-        private string encryptedD = "";
-        private string encryptedN = "";
+        public string encryptedD = "";
+        public string encryptedN = "";
 
         private RSAPrivateKey() {}
 
@@ -23,9 +26,43 @@ namespace AppRSA.RSA
             _n = n;
         }
 
+        public BigInteger GetD()
+        {
+            return _d;
+        }
+
+        public BigInteger GetN()
+        {
+            return _n;
+        }
+
         public BigInteger Decrypt(BigInteger encryptedValue)
         {
             return BigInteger.ModPow(encryptedValue, _d, _n);
+        }
+
+        public List<BigInteger> Decrypt(List<BigInteger> encryption)
+        {
+            List<BigInteger> decryption = new List<BigInteger>();
+            foreach (BigInteger bigInteger in encryption)
+            {
+                decryption.Add(Decrypt(bigInteger));
+            }
+            return decryption;
+        }
+
+        public string Decrypt(string encryption)
+        {
+            List<string> encryptString = encryption.Split('\n').ToList();
+            List<BigInteger> encryptValue = new List<BigInteger>();
+            foreach (string msg in encryptString)
+            {
+                encryptValue.Add(BigInteger.Parse(msg));
+            }
+
+            List<BigInteger> decryptValue = Decrypt(encryptValue);
+
+            return StringUtil.JoinUtf8Messages(decryptValue);
         }
 
         public void EncryptByPassphrase(string passphrase)
@@ -34,7 +71,13 @@ namespace AppRSA.RSA
             encryptedN = AES.AES.Encrypt(passphrase, _n.ToString());
         }
 
-        public static RSAPrivateKey LoadFromFile(string path, string passphrase)
+        public void DecryptByPassphrase(string passphrase)
+        {
+            _d = BigInteger.Parse(AES.AES.Decrypt(passphrase, encryptedD));
+            _n = BigInteger.Parse(AES.AES.Decrypt(passphrase, encryptedN));
+        }
+
+        public static RSAPrivateKey LoadFromFile(string path)
         {
             RSAPrivateKey privateKey = new RSAPrivateKey();
 
@@ -44,12 +87,9 @@ namespace AppRSA.RSA
                 {
                     privateKey.encryptedD = sr.ReadLine();
                     privateKey.encryptedN = sr.ReadLine();
-
-                    privateKey._d = BigInteger.Parse(AES.AES.Decrypt(passphrase, privateKey.encryptedD));
-                    privateKey._n = BigInteger.Parse(AES.AES.Decrypt(passphrase, privateKey.encryptedN));
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new Exception("Неккоректный формат файла!");
             }

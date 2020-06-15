@@ -63,6 +63,7 @@
             this.buttonCreateKey = new System.Windows.Forms.Button();
             this.textBoxCreateKeyName = new System.Windows.Forms.TextBox();
             this.tabPageAboutProgram = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPageDecrypt.SuspendLayout();
@@ -105,12 +106,14 @@
             // 
             // buttonEncryptSave
             // 
+            this.buttonEncryptSave.Enabled = false;
             this.buttonEncryptSave.Location = new System.Drawing.Point(320, 375);
             this.buttonEncryptSave.Name = "buttonEncryptSave";
             this.buttonEncryptSave.Size = new System.Drawing.Size(166, 27);
             this.buttonEncryptSave.TabIndex = 7;
             this.buttonEncryptSave.Text = "Save encrypted text";
             this.buttonEncryptSave.UseVisualStyleBackColor = true;
+            this.buttonEncryptSave.Click += new System.EventHandler(this.buttonEncryptSave_Click);
             // 
             // textBoxEncryptedText
             // 
@@ -129,6 +132,7 @@
             this.buttonEncrypt.TabIndex = 5;
             this.buttonEncrypt.Text = "Encrypt";
             this.buttonEncrypt.UseVisualStyleBackColor = true;
+            this.buttonEncrypt.Click += new System.EventHandler(this.buttonEncrypt_Click);
             // 
             // label7
             // 
@@ -144,9 +148,8 @@
             this.labelEncryptPublicKeyFile.AutoSize = true;
             this.labelEncryptPublicKeyFile.Location = new System.Drawing.Point(163, 154);
             this.labelEncryptPublicKeyFile.Name = "labelEncryptPublicKeyFile";
-            this.labelEncryptPublicKeyFile.Size = new System.Drawing.Size(69, 20);
+            this.labelEncryptPublicKeyFile.Size = new System.Drawing.Size(0, 20);
             this.labelEncryptPublicKeyFile.TabIndex = 3;
-            this.labelEncryptPublicKeyFile.Text = "filename";
             // 
             // buttonEncryptChoosePublicKey
             // 
@@ -156,6 +159,7 @@
             this.buttonEncryptChoosePublicKey.TabIndex = 2;
             this.buttonEncryptChoosePublicKey.Text = "Choose public key";
             this.buttonEncryptChoosePublicKey.UseVisualStyleBackColor = true;
+            this.buttonEncryptChoosePublicKey.Click += new System.EventHandler(this.buttonEncryptChoosePublicKey_Click);
             // 
             // label4
             // 
@@ -176,6 +180,7 @@
             // 
             // tabPageDecrypt
             // 
+            this.tabPageDecrypt.Controls.Add(this.label5);
             this.tabPageDecrypt.Controls.Add(this.buttonDecrypt);
             this.tabPageDecrypt.Controls.Add(this.label11);
             this.tabPageDecrypt.Controls.Add(this.textBoxDecryptMessage);
@@ -202,6 +207,7 @@
             this.buttonDecrypt.TabIndex = 16;
             this.buttonDecrypt.Text = "Decrypt";
             this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.buttonDecrypt_Click);
             // 
             // label11
             // 
@@ -243,9 +249,8 @@
             this.labelDecryptPrivateKey.AutoSize = true;
             this.labelDecryptPrivateKey.Location = new System.Drawing.Point(165, 130);
             this.labelDecryptPrivateKey.Name = "labelDecryptPrivateKey";
-            this.labelDecryptPrivateKey.Size = new System.Drawing.Size(69, 20);
+            this.labelDecryptPrivateKey.Size = new System.Drawing.Size(0, 20);
             this.labelDecryptPrivateKey.TabIndex = 11;
-            this.labelDecryptPrivateKey.Text = "filename";
             // 
             // buttonDecryptChoosePblicKey
             // 
@@ -255,6 +260,7 @@
             this.buttonDecryptChoosePblicKey.TabIndex = 10;
             this.buttonDecryptChoosePblicKey.Text = "Choose public key";
             this.buttonDecryptChoosePblicKey.UseVisualStyleBackColor = true;
+            this.buttonDecryptChoosePblicKey.Click += new System.EventHandler(this.buttonDecryptChoosePblicKey_Click);
             // 
             // buttonDecryptImportPublicKey
             // 
@@ -264,6 +270,7 @@
             this.buttonDecryptImportPublicKey.TabIndex = 9;
             this.buttonDecryptImportPublicKey.Text = "Import encrypted text";
             this.buttonDecryptImportPublicKey.UseVisualStyleBackColor = true;
+            this.buttonDecryptImportPublicKey.Click += new System.EventHandler(this.buttonDecryptImportPublicKey_Click);
             // 
             // textBoxDecryptText
             // 
@@ -439,6 +446,15 @@
             this.tabPageAboutProgram.Text = "About program";
             this.tabPageAboutProgram.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 246);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "label5";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,6 +515,7 @@
         private System.Windows.Forms.Button buttonDecryptImportPublicKey;
         private System.Windows.Forms.TextBox textBoxDecryptText;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
     }
 }
 

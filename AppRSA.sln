@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppRSA", "AppRSA\AppRSA.csproj", "{294E48DD-47C9-438A-AAD2-B96CEA9B4467}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppTest", "..\AppTest\AppTest\AppTest.csproj", "{368CECA9-32A2-41AD-8D95-C88EAB50BB14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,15 @@ Global
 		{294E48DD-47C9-438A-AAD2-B96CEA9B4467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294E48DD-47C9-438A-AAD2-B96CEA9B4467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294E48DD-47C9-438A-AAD2-B96CEA9B4467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368CECA9-32A2-41AD-8D95-C88EAB50BB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368CECA9-32A2-41AD-8D95-C88EAB50BB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368CECA9-32A2-41AD-8D95-C88EAB50BB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368CECA9-32A2-41AD-8D95-C88EAB50BB14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {917AAC5F-245E-4659-9DDA-BCE857812A52}
+		SolutionGuid = {99525A9B-F22D-4937-8180-5D223515A59C}
 	EndGlobalSection
 EndGlobal

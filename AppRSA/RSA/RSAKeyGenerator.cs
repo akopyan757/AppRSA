@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace AppRSA.RSA
 {
-    class RSAKeyInstance
+    class RSAKeyGenerator
     {
         private BigInteger p;
         private BigInteger q;
@@ -17,6 +17,8 @@ namespace AppRSA.RSA
         private RSAPublicKey publicKey;
 
         private string _keyName;
+
+        
 
         public void generateNewKeys(string keyName, string passphrase, int moduleSize)
         {
