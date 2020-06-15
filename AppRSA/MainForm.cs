@@ -188,7 +188,15 @@ namespace AppRSA
                 return;
             }
 
-            privateKey.DecryptByPassphrase(textBoxEDecryptPassphrase.Text);
+            try
+            {
+                privateKey.DecryptByPassphrase(textBoxEDecryptPassphrase.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Неверная парольная фраза!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string decryption = privateKey.Decrypt(textBoxDecryptText.Text);
 
