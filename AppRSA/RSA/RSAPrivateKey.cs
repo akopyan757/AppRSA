@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Text;
-using AppRSA.AES;
 using AppRSA.StringUtils;
 
 namespace AppRSA.RSA
@@ -113,6 +112,8 @@ namespace AppRSA.RSA
             }
         }
 
-        public new string ToString => $"PrivateKey=(d={encryptedD}, n={encryptedN})";
+        public new string ToString => $"PrivateKey=(d={_d}, n={_n})" + Environment.NewLine +
+                                        $"PrivateKey (Encrypted D) = {encryptedD}" + Environment.NewLine +
+                                        $"PrivateKey (Encrypted N) = {encryptedN}";
     }
 }

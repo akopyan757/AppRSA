@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AppRSA.StringUtils
 {
@@ -58,20 +56,6 @@ namespace AppRSA.StringUtils
         {
             throw new NotImplementedException();
         }
-
-        /**
-         *
-         * @param list
-         * @return decimal representation of encrypted/decrypted the message bytes
-        
-        public static String bigIntegerSum(List<BigInteger> list)
-        {
-            BigInteger result = new BigInteger("0");
-            foreach (BigInteger bigInteger in list)
-            {
-                result = result.add(bigInteger);
-            }
-            return result.toString();
-        } */
+     
     }
 }
